@@ -1,1 +1,1 @@
-export const endpoint = `https://fintros-frontend-assignment.herokuapp.com/graphql`;
+export const endpoint = `https://francesco-fintros-assignment.herokuapp.com/graphql`;
