@@ -4,9 +4,11 @@ import './style.css'
 
 const myApp = ({ Component, pageProps, apollo }) => {
   return(
+
       <ApolloProvider client={apollo}>
         <Component {...pageProps} />
       </ApolloProvider>
+    
   )
 };
 

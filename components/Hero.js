@@ -1,15 +1,26 @@
 import styled from 'styled-components'
 
 const HeroParent = styled.section`
-    height: 39vw;
+    padding: 2rem 0;
     background: rgb(183 199 201);
     display: flex;
     flex-flow: column;
     justify-content: center;
+    text-align: center;
+    height: 100vh;
+    @media(min-width: 768px){
+        text-align: left;
+    }
+    @media(min-width: 1440px){
+        height: 39vw;
+    }
 `
 const HeroCopy = styled.div`
-    width: 44%;
-    margin-left: 5rem;
+    padding: 0 2rem;
+    @media(min-width: 1024px){
+        margin-left: 5rem;
+        width: 44%;
+    }
 `;
 const HeroTitle = styled.h1`
     font-size: calc(5.5rem + (8 * (100vw - 1440px)) / 1119);

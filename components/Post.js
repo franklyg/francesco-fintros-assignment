@@ -5,25 +5,39 @@ import PostImage from './PostImage';
 const Post = styled.div`
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-between;
     padding: 0 0 2rem;
     border-bottom: 1px solid rgb(238, 226, 215); 
+    @media(min-width: 736px){
+        padding: 0 9rem 2rem;
+    }
+    @media(min-width: 1024px){
+        padding: 0 0 2rem;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
 `;
 const Content = styled.div`
     width: 100%;
-    @media(min-width: 1440px){
+    @media(min-width: 768px){
         margin-left: 4.16667%;
         width: 62.5%;
     }
 `;
 const Image = styled.div`
     width: 100%;
+    height: 15.5rem;
     overflow: hidden;
     padding-bottom: 2rem;
+    margin-top: 1.25rem;
+    background: white;
     @media(min-width: 736px){
-        width: 33.33333%;
         height: 28.75rem;
+    }
+    @media(min-width: 1024px){
+        width: 33.33333%;
     }
 `;
 const PostTage = styled.p`
@@ -40,7 +54,6 @@ const PostCopy = styled.p`
 `;
 const PostLink = styled.a`
     border-bottom: 0.125rem solid currentcolor;
-    color: rgba(0, 0, 0, 0.88);
     font-family: SofiaProWeb, Helvetica, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 0.125em;
@@ -69,7 +82,7 @@ const Page = ({ item, targetUrl }) => {
         
         <Post>
             <Image>
-                <PostImage url={ item.url } targetUrl={ targetUrl } />
+                <PostImage />
             </Image>
             <Content>
                 <PostTage>{item.type}</PostTage>
